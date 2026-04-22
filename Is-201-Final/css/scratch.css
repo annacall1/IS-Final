@@ -1,0 +1,52 @@
+body {
+  background-color: #f4f1ea;
+  font-family: Georgia, serif;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #d9e8f5;
+  text-align: center;
+  padding: 20px;
+}
+
+.section {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 10px; /* added */
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+a {
+  color: #1d4e89;
+  text-decoration: none; /* added */
+}
+
+a:hover {
+  text-decoration: underline; /* added */
+}
+
+h1, h2 {
+  color: #0f2f4f;
+}
+
+img {
+  border-radius: 8px;
+}
+
+/* NEW: extra styling for lists */
+ol {
+  padding-left: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}

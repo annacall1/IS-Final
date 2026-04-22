@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .app-box {
+      background: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1rem;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-box">
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 20.</p>
+
+    <input type="number" id="guessInput" min="1" max="20">
+    <button onclick="checkGuess()">Submit Guess</button>
+
+    <p id="message"></p>
+
+    <a href="scratch.html">Back to Scratch Page</a>
+  </div>
+
+  <script>
+    const secretNumber = Math.floor(Math.random() * 20) + 1;
+
+    function checkGuess() {
+      const guess = Number(document.getElementById("guessInput").value);
+      const message = document.getElementById("message");
+
+      if (guess === secretNumber) {
+        message.textContent = "Correct! You guessed the number.";
+      } else if (guess < secretNumber) {
+        message.textContent = "Too low. Try again.";
+      } else {
+        message.textContent = "Too high. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
